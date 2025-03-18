@@ -1,0 +1,133 @@
+[2025-03-11 04:11:07] local.ERROR: Command "make:middleware" is not defined.
+
+Did you mean one of these?
+    make:migration
+    make:seeder {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:middleware\" is not defined.
+
+Did you mean one of these?
+    make:migration
+    make:seeder at H:\\encarga\\formulario\\server\\lumen-api\\vendor\\symfony\\console\\Application.php:737)
+[stacktrace]
+#0 H:\\encarga\\formulario\\server\\lumen-api\\vendor\\symfony\\console\\Application.php(266): Symfony\\Component\\Console\\Application->find('make:middleware')
+#1 H:\\encarga\\formulario\\server\\lumen-api\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 H:\\encarga\\formulario\\server\\lumen-api\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(160): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 H:\\encarga\\formulario\\server\\lumen-api\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 {main}
+"} 
+[2025-03-11 04:16:18] local.ERROR: Command "make:model" is not defined.
+
+Did you mean one of these?
+    make:migration
+    make:seeder {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:model\" is not defined.
+
+Did you mean one of these?
+    make:migration
+    make:seeder at H:\\encarga\\formulario\\server\\lumen-api\\vendor\\symfony\\console\\Application.php:737)
+[stacktrace]
+#0 H:\\encarga\\formulario\\server\\lumen-api\\vendor\\symfony\\console\\Application.php(266): Symfony\\Component\\Console\\Application->find('make:model')
+#1 H:\\encarga\\formulario\\server\\lumen-api\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 H:\\encarga\\formulario\\server\\lumen-api\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(160): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 H:\\encarga\\formulario\\server\\lumen-api\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 {main}
+"} 
+[2025-03-11 04:18:28] local.ERROR: Cannot declare class CreateAttendeesTable, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class CreateAttendeesTable, because the name is already in use at H:\\encarga\\formulario\\server\\lumen-api\\database\\migrations\\2025_03_11_041306_suscribe.php:7)
+[stacktrace]
+#0 {main}
+"} 
+[2025-03-11 04:19:42] local.ERROR: Cannot declare class CreateAttendeesTable, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class CreateAttendeesTable, because the name is already in use at H:\\encarga\\formulario\\server\\lumen-api\\database\\migrations\\2025_03_11_041306_suscribe.php:7)
+[stacktrace]
+#0 {main}
+"} 
+[2025-03-11 04:20:17] local.ERROR: Cannot declare class CreateAttendeesTable, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class CreateAttendeesTable, because the name is already in use at H:\\encarga\\formulario\\server\\lumen-api\\database\\migrations\\2025_03_11_041306_attendees.php:7)
+[stacktrace]
+#0 {main}
+"} 
+[2025-03-11 04:20:29] local.ERROR: Cannot declare class CreateAttendeesTable, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class CreateAttendeesTable, because the name is already in use at H:\\encarga\\formulario\\server\\lumen-api\\database\\migrations\\2025_03_11_041306_attendees.php:7)
+[stacktrace]
+#0 {main}
+"} 
+[2025-03-11 04:20:50] local.ERROR: There are no commands defined in the "optimize" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"optimize\" namespace. at H:\\encarga\\formulario\\server\\lumen-api\\vendor\\symfony\\console\\Application.php:669)
+[stacktrace]
+#0 H:\\encarga\\formulario\\server\\lumen-api\\vendor\\symfony\\console\\Application.php(720): Symfony\\Component\\Console\\Application->findNamespace('optimize')
+#1 H:\\encarga\\formulario\\server\\lumen-api\\vendor\\symfony\\console\\Application.php(266): Symfony\\Component\\Console\\Application->find('optimize:clear')
+#2 H:\\encarga\\formulario\\server\\lumen-api\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 H:\\encarga\\formulario\\server\\lumen-api\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(160): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 H:\\encarga\\formulario\\server\\lumen-api\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2025-03-11 04:21:05] local.ERROR: There are no commands defined in the "optimize" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"optimize\" namespace. at H:\\encarga\\formulario\\server\\lumen-api\\vendor\\symfony\\console\\Application.php:669)
+[stacktrace]
+#0 H:\\encarga\\formulario\\server\\lumen-api\\vendor\\symfony\\console\\Application.php(720): Symfony\\Component\\Console\\Application->findNamespace('optimize')
+#1 H:\\encarga\\formulario\\server\\lumen-api\\vendor\\symfony\\console\\Application.php(266): Symfony\\Component\\Console\\Application->find('optimize:clear')
+#2 H:\\encarga\\formulario\\server\\lumen-api\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 H:\\encarga\\formulario\\server\\lumen-api\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(160): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 H:\\encarga\\formulario\\server\\lumen-api\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2025-03-11 04:21:08] local.ERROR: Cannot declare class CreateAttendeesTable, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class CreateAttendeesTable, because the name is already in use at H:\\encarga\\formulario\\server\\lumen-api\\database\\migrations\\2025_03_11_041306_attendees.php:7)
+[stacktrace]
+#0 {main}
+"} 
+[2025-03-11 04:23:01] local.ERROR: Cannot declare class CreateAttendeesTable, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class CreateAttendeesTable, because the name is already in use at H:\\encarga\\formulario\\server\\lumen-api\\database\\migrations\\2025_03_11_041306_attendees.php:7)
+[stacktrace]
+#0 {main}
+"} 
+[2025-03-11 04:24:51] local.ERROR: Cannot declare class CreateAttendeesTable, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class CreateAttendeesTable, because the name is already in use at H:\\encarga\\formulario\\server\\lumen-api\\database\\migrations\\2025_03_11_041306_attendees_table.php:7)
+[stacktrace]
+#0 {main}
+"} 
+[2025-03-11 04:27:10] local.ERROR: Command "make:controller" is not defined.
+
+Did you mean one of these?
+    make:migration
+    make:seeder {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:controller\" is not defined.
+
+Did you mean one of these?
+    make:migration
+    make:seeder at H:\\encarga\\formulario\\server\\lumen-api\\vendor\\symfony\\console\\Application.php:737)
+[stacktrace]
+#0 H:\\encarga\\formulario\\server\\lumen-api\\vendor\\symfony\\console\\Application.php(266): Symfony\\Component\\Console\\Application->find('make:controller')
+#1 H:\\encarga\\formulario\\server\\lumen-api\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 H:\\encarga\\formulario\\server\\lumen-api\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(160): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 H:\\encarga\\formulario\\server\\lumen-api\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 {main}
+"} 
+[2025-03-11 04:35:11] local.ERROR: There are no commands defined in the "route" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"route\" namespace. at H:\\encarga\\formulario\\server\\lumen-api\\vendor\\symfony\\console\\Application.php:669)
+[stacktrace]
+#0 H:\\encarga\\formulario\\server\\lumen-api\\vendor\\symfony\\console\\Application.php(720): Symfony\\Component\\Console\\Application->findNamespace('route')
+#1 H:\\encarga\\formulario\\server\\lumen-api\\vendor\\symfony\\console\\Application.php(266): Symfony\\Component\\Console\\Application->find('route:list')
+#2 H:\\encarga\\formulario\\server\\lumen-api\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 H:\\encarga\\formulario\\server\\lumen-api\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(160): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 H:\\encarga\\formulario\\server\\lumen-api\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2025-03-11 05:21:07] local.ERROR: Malformed UTF-8 characters, possibly incorrectly encoded {"exception":"[object] (InvalidArgumentException(code: 0): Malformed UTF-8 characters, possibly incorrectly encoded at H:\\encarga\\formulario\\consejero\\vendor\\illuminate\\http\\JsonResponse.php:88)
+[stacktrace]
+#0 H:\\encarga\\formulario\\consejero\\vendor\\symfony\\http-foundation\\JsonResponse.php(49): Illuminate\\Http\\JsonResponse->setData(Array)
+#1 H:\\encarga\\formulario\\consejero\\vendor\\illuminate\\http\\JsonResponse.php(32): Symfony\\Component\\HttpFoundation\\JsonResponse->__construct(Array, 200, Array, false)
+#2 H:\\encarga\\formulario\\consejero\\vendor\\laravel\\lumen-framework\\src\\Http\\ResponseFactory.php(40): Illuminate\\Http\\JsonResponse->__construct(Array, 200, Array, 0)
+#3 H:\\encarga\\formulario\\consejero\\app\\Http\\Controllers\\AttendeeController.php(83): Laravel\\Lumen\\Http\\ResponseFactory->json(Array)
+#4 H:\\encarga\\formulario\\consejero\\app\\Http\\Controllers\\AttendeeController.php(94): App\\Http\\Controllers\\AttendeeController->decode('Basic ZGlvc2Nvb...')
+#5 H:\\encarga\\formulario\\consejero\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Http\\Controllers\\AttendeeController->destroy(Object(Laravel\\Lumen\\Http\\Request), '2')
+#6 H:\\encarga\\formulario\\consejero\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#7 H:\\encarga\\formulario\\consejero\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#8 H:\\encarga\\formulario\\consejero\\vendor\\illuminate\\container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#9 H:\\encarga\\formulario\\consejero\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#10 H:\\encarga\\formulario\\consejero\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call(Array, Array)
+#11 H:\\encarga\\formulario\\consejero\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(357): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#12 H:\\encarga\\formulario\\consejero\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\AttendeeController), 'destroy', Array)
+#13 H:\\encarga\\formulario\\consejero\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction(Array)
+#14 H:\\encarga\\formulario\\consejero\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#15 H:\\encarga\\formulario\\consejero\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(239): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#16 H:\\encarga\\formulario\\consejero\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(175): Laravel\\Lumen\\Application->handleDispatcherResponse(Array)
+#17 H:\\encarga\\formulario\\consejero\\vendor\\laravel\\lumen-framework\\src\\Routing\\Pipeline.php(48): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#18 H:\\encarga\\formulario\\consejero\\vendor\\illuminate\\http\\Middleware\\HandleCors.php(49): Laravel\\Lumen\\Routing\\Pipeline->Laravel\\Lumen\\Routing\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#19 H:\\encarga\\formulario\\consejero\\vendor\\illuminate\\pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Laravel\\Lumen\\Http\\Request), Object(Closure))
+#20 H:\\encarga\\formulario\\consejero\\vendor\\laravel\\lumen-framework\\src\\Routing\\Pipeline.php(30): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#21 H:\\encarga\\formulario\\consejero\\vendor\\illuminate\\pipeline\\Pipeline.php(119): Laravel\\Lumen\\Routing\\Pipeline->Laravel\\Lumen\\Routing\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#22 H:\\encarga\\formulario\\consejero\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(428): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#23 H:\\encarga\\formulario\\consejero\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(177): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#24 H:\\encarga\\formulario\\consejero\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch(NULL)
+#25 H:\\encarga\\formulario\\consejero\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#26 {main}
+"} 
