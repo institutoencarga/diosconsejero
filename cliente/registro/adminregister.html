@@ -1,0 +1,253 @@
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (!sessionStorage.getItem("authenticated")) {
+            document.body.style.display = 'none';
+            alert("No tienes permisos para acceder a esta página");
+            window.location.href = 'loggin.html';
+        }
+    });
+</script>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Asistentes</title>.
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <style>
+        .markeo {
+            margin-top: 50px;
+            padding: 40px;
+            padding-top: 0;
+        }
+
+        #attendeeForm {
+            width: 60%;
+            margin: auto;
+            transition: opacity 0.3s ease-in-out;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .eye-icon {
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        #toggleEye {
+            cursor: pointer;
+            display: inline-block;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        /* Animación al pasar el mouse */
+        #toggleEye:hover {
+            transform: translateY(-20px) rotate(25deg) scale(1.2);
+        }
+
+        /* Efecto de sacudida al quitar el mouse */
+        @keyframes shake {
+            0% {
+                transform: rotate(10deg);
+            }
+
+            25% {
+                transform: rotate(-10deg);
+            }
+
+            50% {
+                transform: rotate(10deg);
+            }
+
+            75% {
+                transform: rotate(-10deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body class="container mt-4">
+
+    <header>
+        <img class="logo" src="../assets/new/logo.png" alt="Logo de la conferencia" style="width:400px !important" />
+        <div class="content_header">
+            <div class="bloque_hombre">
+                <h1>Administrador de <span>Asistentes</span></h1>
+                <p>Evento Dios consejero</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="markeo">
+        <h2 class="text-center">Registro de asistentes <span id="toggleEye" class="eye-icon">🐵</span></h2>
+        <p style="color: rgba(255,255,255,0.5);">Ingresa los datos del asistente si no esta activo solo selecciona el
+            mono (🐵)</p>
+        <div class="atte" id="atten">
+            <form id="attendeeForm" class="d-flex flex-column gap-3 p-4 shadow-sm p-4">
+                <input type="text" id="nombre" class="form-control" placeholder="Nombre" required>
+                <input type="text" id="apellido" class="form-control" placeholder="Apellido" required>
+                <input type="email" id="email" class="form-control" placeholder="Email" required>
+                <input type="text" id="celular" class="form-control" placeholder="Celular" required>
+                <input type="text" id="pais_ciudad" class="form-control" placeholder="País/Ciudad" required>
+                <select id="boleta" class="form-select">
+                    <option value="virtual">Virtual</option>
+                    <option value="presencial">Presencial</option>
+                </select>
+                <div class="d-flex gap-3">
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                    <button id="limpiar" type="submit" class="btn btn-success">Limpiar</button>
+                </div>
+            </form>
+        </div>
+
+
+        <h2 class="text-center mt-4">Lista de Asistentes</h2>
+        <table class="table table-bordered table-striped mt-3">
+            <thead class="table-dark">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Celular</th>
+                    <th>Ubicación</th>
+                    <th>Boleta</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="attendeesTable"></tbody>
+        </table>
+    </div>
+
+    <script>
+        const apiUrl = 'https://diosconsejero.com/api/attendees';
+        const encodedKey = btoa("diosconsejeroapi");
+
+        document.getElementById('attendeeForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const data = {
+                nombre: document.getElementById('nombre').value,
+                apellido: document.getElementById('apellido').value,
+                email: document.getElementById('email').value,
+                celular: document.getElementById('celular').value,
+                pais_ciudad: document.getElementById('pais_ciudad').value,
+                boleta: document.getElementById('boleta').value
+            };
+            await fetch(apiUrl, {
+                method: 'POST', headers: {
+                    "Authorization": `Basic ${encodedKey}`,
+                    "Content-Type": "application/json"
+                }, body: JSON.stringify(data)
+            });
+            loadAttendees();
+        });
+
+        async function loadAttendees() {
+            const res = await fetch(apiUrl, {
+                method: "GET",
+                headers: {
+                    "Authorization": `Basic ${encodedKey}`,
+                    "Content-Type": "application/json"
+                }
+            });
+            const attendees = await res.json();
+            const tbody = document.getElementById('attendeesTable');
+            tbody.innerHTML = '';
+            attendees.forEach(att => {
+                const row = `<tr>
+                    <td>${att.nombre}</td>
+                    <td>${att.apellido}</td>
+                    <td>${att.email}</td>
+                    <td>${att.celular}</td>
+                    <td>${att.pais_ciudad}</td>
+                    <td>${att.boleta}</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm" onclick="editAttendee(${att.id})">Editar</button>
+                        <button class="btn btn-danger btn-sm" onclick="deleteAttendee(${att.id})">Eliminar</button>
+                    </td>
+                </tr>`;
+                tbody.innerHTML += row;
+            });
+        }
+
+        async function deleteAttendee(id) {
+            const confirmDelete = confirm("¿Está seguro de que desea eliminar este asistente?");
+            if (confirmDelete) {
+                await fetch(`${apiUrl}/${id}`, {
+                    method: 'DELETE',
+                    headers: {
+                        "Authorization": `Basic ${encodedKey}`,
+                        "Content-Type": "application/json"
+                    }
+                });
+                loadAttendees();
+            }
+        }
+
+        async function editAttendee(id) {
+            const res = await fetch(`${apiUrl}/${id}`, {
+                method: "GET",
+                headers: {
+                    "Authorization": `Basic ${encodedKey}`,
+                    "Content-Type": "application/json"
+                }
+            });
+            const att = await res.json();
+            document.getElementById('nombre').value = att.nombre;
+            document.getElementById('apellido').value = att.apellido;
+            document.getElementById('email').value = att.email;
+            document.getElementById('celular').value = att.celular;
+            document.getElementById('pais_ciudad').value = att.pais_ciudad;
+            document.getElementById('boleta').value = att.boleta;
+
+            document.getElementById('attendeeForm').onsubmit = async (e) => {
+                e.preventDefault();
+                const updatedData = {
+                    nombre: document.getElementById('nombre').value,
+                    apellido: document.getElementById('apellido').value,
+                    email: document.getElementById('email').value,
+                    celular: document.getElementById('celular').value,
+                    pais_ciudad: document.getElementById('pais_ciudad').value,
+                    boleta: document.getElementById('boleta').value
+                };
+                await fetch(`${apiUrl}/${id}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(updatedData) });
+                loadAttendees();
+                document.getElementById('attendeeForm').reset();
+                document.getElementById('attendeeForm').onsubmit = (ev) => ev.preventDefault();
+            };
+        }
+
+        loadAttendees();
+
+        document.getElementById("toggleEye").addEventListener("click", function () {
+            const form = document.getElementById("atten");
+            if (form.style.display === "none") {
+                form.style.display = "block";
+                this.textContent = "🙈"; // Mono con ojos tapados
+            } else {
+                form.style.display = "none";
+                this.textContent = "🐵"; // Mono normal
+            }
+        });
+
+        document.getElementById("limpiar").addEventListener("click", function () {
+            document.getElementById('attendeeForm').reset();
+        });
+    </script>
+</body>
+
+</html>

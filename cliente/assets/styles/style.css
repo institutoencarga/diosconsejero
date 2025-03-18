@@ -1,0 +1,507 @@
+@import url("./fonts.css");
+
+:root {
+  --green_header: #3daa6e;
+  --vinotinto: #370000;
+  --canela: #dbbb63;
+  --color-acento: #a2873c;
+
+  --fondo: #2c2c2c;
+  --texto-beige: #b0846b;
+  --marron: #2c1d11;
+  --color-fondo: #302f2e;
+  --font-family: "Anek Latin"; /*, sans-serif;*/
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+  color: white;
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 16px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.container {
+  width: 90%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+  max-width: 80vw;
+  margin: auto;
+  background-color: #333;
+  border-radius: 10px;
+  background-image: url(../new/fondo.png);
+  background-repeat: repeat;
+  border-radius: 20px;
+  -webkit-box-shadow: 10px 11px 30px 7px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 10px 11px 30px 7px rgba(0, 0, 0, 0.54);
+  box-shadow: 10px 11px 30px 7px rgba(0, 0, 0, 0.54);
+}
+
+header {
+  margin-bottom: 1em;
+}
+
+.logo {
+  width: 37vw;
+  margin: 20px 0;
+  margin-left: 6%;
+}
+
+.minilogo {
+  width: 10vw;
+  position: absolute;
+  left: 5%;
+  top: 3%;
+}
+
+.minilogo .minilogo_mobile {
+  display: none;
+}
+
+.content_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.content_header .bloque_hombre {
+  /** background-color: var(--marron); **/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 20px;
+  max-width: 50%;
+  max-height: 80px;
+}
+.content_header .bloque_hombre h1 {
+  color: white;
+  font-weight: 300;
+  font-weight: 500;
+  font-size: 2.5em;
+  margin: 0px;
+}
+
+.content_header .bloque_hombre p {
+  font-size: 1.8em;
+  margin: 0px;
+  margin-top: -10px;
+}
+.bloque_hombre span {
+  color: var(--color-acento);
+  font-weight: bold;
+}
+
+.datos_top {
+  font-weight: bold;
+}
+
+.bloque_datos {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: left;
+  max-width: 40%;
+  font-size: 2.2em;
+  letter-spacing: -1px;
+  line-height: 32px;
+  margin-bottom: 2em;
+  letter-spacing: 1.5px;
+}
+
+.bloque_www h1 {
+  font-size: 2em;
+  font-weight: 300;
+  font-family: var(--font-family);
+  background: url("../img/tramado.JPG") repeat;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  background-clip: text;
+  color: transparent;
+  opacity: 0.8;
+  letter-spacing: 10px;
+  margin-left: -1.5em;
+}
+
+.info {
+  margin: 5px 0;
+}
+
+.orange {
+  color: var(--canela);
+  font-weight: bold;
+}
+
+article {
+  background-color: var(--canela);
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+article::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(24px) brightness(0.7) opacity(0.4);
+  mix-blend-mode: luminosity;
+  background: url("../img/tramado.JPG") repeat center center;
+  opacity: 1;
+  z-index: -1;
+}
+
+article h2 {
+  font-size: 4em;
+  text-shadow: 6px 6px 30px rgba(0, 0, 0, 0.54);
+
+  font-weight: bold;
+}
+
+article {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+article .conf_card {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 10px;
+  grid-template-rows: 1fr;
+  justify-content: center;
+}
+
+article .type_two {
+  grid-template-columns: 1fr 270px;
+  gap: 10px;
+  text-align: right;
+}
+
+article .type_two .card_text {
+  text-align: right;
+}
+
+article .type_two img {
+  order: 1;
+}
+
+article .conf_card img {
+  width: 260px;
+  height: 200px;
+  aspect-ratio: 16 / 9;
+}
+
+.conf_card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+.conf_card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.card_text {
+  text-align: left;
+}
+
+.card_text h3 {
+  margin: 0px;
+  font-size: 3em;
+  color: var(--color-fondo);
+}
+.card_text p {
+  margin: 0px;
+  font-size: 2.5em;
+  color: var(--color-fondo);
+}
+.type_two h3 {
+  color: white;
+}
+.type_two p {
+  color: white;
+}
+
+footer {
+  font-size: 3em;
+  font-weight: 600;
+  padding: 30px;
+}
+
+.button {
+  display: inline-block;
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 400;
+  border-radius: 30px;
+  min-width: 25%;
+  text-decoration: none;
+  font-family: var(--font-family);
+}
+
+.two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.morange {
+  background-color: var(--canela);
+}
+
+.morange:hover {
+  background-color: var(--color-acento) !important;
+}
+
+/* Móvil: hasta 480px */
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    width: 100%;
+    max-width: 100vw;
+    padding: 0;
+    flex-direction: column;
+    border-radius: 0px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    width: 70vw;
+  }
+
+  .minilogo {
+    display: none;
+    width: 20vw;
+    position: relative;
+  }
+
+  .bloque_www {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bloque_www img {
+    width: 50%;
+    margin-bottom: 40px;
+  }
+
+  .content_header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .content_header .bloque_hombre {
+    max-width: 100%;
+    max-height: none;
+    padding: 15px;
+  }
+
+  .content_header .bloque_hombre h1 {
+    font-size: 1.8em;
+  }
+
+  .content_header .bloque_hombre p {
+    font-size: 1.2em;
+    margin-top: 0;
+  }
+
+  .bloque_datos {
+    width: auto;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 20px;
+    max-width: 100%;
+  }
+
+  .bloque_www h1 {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .bloque_www .minilogo_mobile {
+    display: flex;
+    justify-content: center;
+  }
+
+  article h2 {
+    font-size: 2.5em;
+  }
+
+  .conf_card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    grid-template-columns: 1fr;
+    width: 95%;
+  }
+
+  .conf_card img {
+    width: 150px;
+    height: auto;
+    margin: 0 auto 10px;
+  }
+
+  article .conf_card {
+    width: 90%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .card_text h3 {
+    text-align: center;
+    font-size: 1.8em;
+  }
+
+  .card_text p {
+    text-align: center;
+    font-size: 1.2em;
+  }
+
+  .two {
+    flex-direction: column;
+  }
+
+  article .type_two .card_text {
+    text-align: center;
+  }
+
+  article .type_two img {
+    order: 0;
+  }
+
+  footer {
+    font-size: 1.5em;
+    padding: 20px;
+  }
+
+  .button {
+    min-width: 70%;
+    padding: 8px 15px;
+  }
+}
+
+/* Escritorio: 769px en adelante */
+/* Los estilos base ya están configurados para escritorio, pero se pueden ajustar si es necesario */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    width: 90%;
+    max-width: 80vw;
+    padding: 40px 0;
+  }
+
+  .logo {
+    width: 37vw;
+  }
+
+  .content_header .bloque_hombre {
+    max-width: 50%;
+  }
+
+  .bloque_datos {
+    max-width: 40%;
+  }
+
+  .conf_card {
+    grid-template-columns: 270px 1fr;
+  }
+
+  .type_two {
+    grid-template-columns: 1fr 270px;
+  }
+
+  .conf_card img {
+    width: 260px;
+    height: 200px;
+  }
+
+  .bloque_datos {
+    width: auto;
+    text-align: center;
+    font-size: 1.8em;
+    line-height: 20px;
+    max-width: 100%;
+  }
+
+  .bloque_www h1 {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .bloque_www .minilogo_mobile {
+    display: none;
+  }
+
+  .card_text h3 {
+    font-size: 2em;
+  }
+
+  .card_text p {
+    font-size: 1.5em;
+  }
+
+  article h2 {
+    font-size: 2.5em;
+  }
+
+  .two {
+    flex-direction: column;
+  }
+
+  article .type_two .card_text {
+    text-align: right;
+  }
+
+  article .type_two img {
+    order: 1;
+  }
+
+  footer {
+    font-size: 1.5em;
+    padding: 20px;
+  }
+
+  .button {
+    min-width: 70%;
+    padding: 8px 15px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 4200px) {
+  .bloque_www .minilogo_mobile {
+    display: none !important;
+  }
+}

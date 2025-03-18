@@ -1,0 +1,214 @@
+/* Anek Latin Condensed */
+/*@font-face {
+    font-family: 'Anek Latin Condensed';
+    src: url('static/AnekLatin_Condensed-Thin.ttf') format('truetype');
+    font-weight: 100;
+  }
+  @font-face {
+    font-family: 'Anek Latin Condensed';
+    src: url('static/AnekLatin_Condensed-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+  }
+  @font-face {
+    font-family: 'Anek Latin Condensed';
+    src: url('static/AnekLatin_Condensed-Light.ttf') format('truetype');
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: 'Anek Latin Condensed';
+    src: url('static/AnekLatin_Condensed-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'Anek Latin Condensed';
+    src: url('static/AnekLatin_Condensed-Medium.ttf') format('truetype');
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: 'Anek Latin Condensed';
+    src: url('static/AnekLatin_Condensed-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: 'Anek Latin Condensed';
+    src: url('static/AnekLatin_Condensed-Bold.ttf') format('truetype');
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: 'Anek Latin Condensed';
+    src: url('static/AnekLatin_Condensed-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+  }
+  
+  /* Anek Latin SemiCondensed 
+  @font-face {
+    font-family: 'Anek Latin SemiCondensed';
+    src: url('static/AnekLatin_SemiCondensed-Thin.ttf') format('truetype');
+    font-weight: 100;
+  }
+  @font-face {
+    font-family: 'Anek Latin SemiCondensed';
+    src: url('static/AnekLatin_SemiCondensed-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+  }
+  @font-face {
+    font-family: 'Anek Latin SemiCondensed';
+    src: url('static/AnekLatin_SemiCondensed-Light.ttf') format('truetype');
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: 'Anek Latin SemiCondensed';
+    src: url('static/AnekLatin_SemiCondensed-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'Anek Latin SemiCondensed';
+    src: url('static/AnekLatin_SemiCondensed-Medium.ttf') format('truetype');
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: 'Anek Latin SemiCondensed';
+    src: url('static/AnekLatin_SemiCondensed-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: 'Anek Latin SemiCondensed';
+    src: url('static/AnekLatin_SemiCondensed-Bold.ttf') format('truetype');
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: 'Anek Latin SemiCondensed';
+    src: url('static/AnekLatin_SemiCondensed-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+  }
+  
+  /* Anek Latin */
+  @font-face {
+    font-family: 'Anek Latin';
+    src: url('static/AnekLatin-Thin.ttf') format('truetype');
+    font-weight: 100;
+  }
+  @font-face {
+    font-family: 'Anek Latin';
+    src: url('static/AnekLatin-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+  }
+  @font-face {
+    font-family: 'Anek Latin';
+    src: url('static/AnekLatin-Light.ttf') format('truetype');
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: 'Anek Latin';
+    src: url('static/AnekLatin-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'Anek Latin';
+    src: url('static/AnekLatin-Medium.ttf') format('truetype');
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: 'Anek Latin';
+    src: url('static/AnekLatin-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: 'Anek Latin';
+    src: url('static/AnekLatin-Bold.ttf') format('truetype');
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: 'Anek Latin';
+    src: url('static/AnekLatin-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+  }
+  
+  /* Anek Latin SemiExpanded */
+  @font-face {
+    font-family: 'Anek Latin SemiExpanded';
+    src: url('static/AnekLatin_SemiExpanded-Thin.ttf') format('truetype');
+    font-weight: 100;
+  }
+  @font-face {
+    font-family: 'Anek Latin SemiExpanded';
+    src: url('static/AnekLatin_SemiExpanded-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+  }
+  @font-face {
+    font-family: 'Anek Latin SemiExpanded';
+    src: url('static/AnekLatin_SemiExpanded-Light.ttf') format('truetype');
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: 'Anek Latin SemiExpanded';
+    src: url('static/AnekLatin_SemiExpanded-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'Anek Latin SemiExpanded';
+    src: url('static/AnekLatin_SemiExpanded-Medium.ttf') format('truetype');
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: 'Anek Latin SemiExpanded';
+    src: url('static/AnekLatin_SemiExpanded-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: 'Anek Latin SemiExpanded';
+    src: url('static/AnekLatin_SemiExpanded-Bold.ttf') format('truetype');
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: 'Anek Latin SemiExpanded';
+    src: url('static/AnekLatin_SemiExpanded-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+  }
+  
+  /* Anek Latin Expanded */
+  @font-face {
+    font-family: 'Anek Latin Expanded';
+    src: url('static/AnekLatin_Expanded-Thin.ttf') format('truetype');
+    font-weight: 100;
+  }
+  @font-face {
+    font-family: 'Anek Latin Expanded';
+    src: url('static/AnekLatin_Expanded-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+  }
+  @font-face {
+    font-family: 'Anek Latin Expanded';
+    src: url('static/AnekLatin_Expanded-Light.ttf') format('truetype');
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: 'Anek Latin Expanded';
+    src: url('static/AnekLatin_Expanded-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'Anek Latin Expanded';
+    src: url('static/AnekLatin_Expanded-Medium.ttf') format('truetype');
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: 'Anek Latin Expanded';
+    src: url('static/AnekLatin_Expanded-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: 'Anek Latin Expanded';
+    src: url('static/AnekLatin_Expanded-Bold.ttf') format('truetype');
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: 'Anek Latin Expanded';
+    src: url('static/AnekLatin_Expanded-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+  }
+  
+  body {
+    font-family: 'Anek Latin', sans-serif;
+  }
+  

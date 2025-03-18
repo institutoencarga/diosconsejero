@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Asistentes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <style>
+        .markeo {
+            margin-top: 50px;
+            padding: 20%;
+            padding-top: 0;
+            zoom: 1.5;
+        }
+    </style>
+</head>
+
+<body class="container mt-4">
+
+    <header>
+        <img class="logo" src="../assets/new/logo.png" alt="Logo de la conferencia" />>
+        <div class="content_header">
+            <div class="bloque_hombre">
+                <h1>SÉ UN <span>HOMBRE</span> DE DIOS</h1>
+                <p>Aconsejando el corazón masculino</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="markeo">
+        <h2 class="text-center">Registráte</h2>
+        <form id="attendeeForm" class="d-flex flex-column gap-3 p-4 shadow-sm p-4">
+            <input type="hidden" id="type_user" class="form-control" value="informacion">
+            <input type="text" id="nombre" class="form-control" placeholder="Nombre" required>
+            <input type="text" id="apellido" class="form-control" placeholder="Apellido" required>
+            <input type="email" id="email" class="form-control" placeholder="Email" required>
+            <input type="text" id="celular" class="form-control" placeholder="Celular" required>
+            <input type="text" id="pais_ciudad" class="form-control" placeholder="País/Ciudad" required>
+            <select id="boleta" class="form-select">
+                <option value="virtual">Virtual</option>
+                <option value="presencial">Presencial</option>
+            </select>
+
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+
+        
+    </div>
+
+    <script>
+        const apiUrl = 'https://diosconsejero.com/api/attendees';
+        const encodedKey = btoa("diosconsejeroapi");
+
+        document.getElementById('attendeeForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const data = {
+                nombre: document.getElementById('nombre').value,
+                apellido: document.getElementById('apellido').value,
+                email: document.getElementById('email').value,
+                celular: document.getElementById('celular').value,
+                pais_ciudad: document.getElementById('pais_ciudad').value,
+                boleta: document.getElementById('boleta').value,
+                type_user: document.getElementById('type_user').value
+            };
+            await fetch(apiUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+            window.location.href = "https://biz.payulatam.com/B0e918fB15922F6"; 
+            loadAttendees();
+        });
+
+
+        loadAttendees();
+    </script>
+</body>
+
+</html>
